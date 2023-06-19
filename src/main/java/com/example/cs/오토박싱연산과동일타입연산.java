@@ -1,3 +1,5 @@
+package com.example.cs;
+
 public class 오토박싱연산과동일타입연산 {
 
     public static void main(String[] args) {
