@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.직렬화;
 
 import java.io.Serializable;
 
