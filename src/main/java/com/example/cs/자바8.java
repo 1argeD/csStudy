@@ -22,7 +22,7 @@ public class 자바8 {
     *
     * Stream Api
     * Method Reference & Lamda
-    *Default Method
+    * Default Method
     *
     * Stream API는 병렬 연산을 지원하는 API다. 이제 기존의 병렬 처리를 위해 사용하던 synchronized를 사용하지 않아도 된다.
     * synchronized는 에러를 유발할 가능성과 비용 측에서 문제점이 많은 단점이 있었ㅎ다.

@@ -9,7 +9,7 @@ public class Object클래스 {
     *
     * toString()
     * hashCode(0
-    * wait() - 갖고 있던 고유 lock 해제, Thread를 잡들게 함
+    * wait() - 갖고 있던 고유 lock 해제, Thread를 잠들게 함
     *
     * notify()
     * 잠들던 Thread 중 임의의 하나를 깨움.
