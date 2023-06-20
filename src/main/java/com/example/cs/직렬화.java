@@ -1,5 +1,8 @@
 package com.example.cs;
 
+import java.io.*;
+
+
 public class 직렬화 {
     //직렬화
     //---------------------------------------------------------------------------------------------------------------------------------
@@ -19,7 +22,58 @@ public class 직렬화 {
     //직렬화 조건
     //---------------------------------------------------------------------------------------------------------------------------------
 
-    /*자바에서는 간단히 java.io.*/
+    /*자바에서는 간단히 java.io.Serializable 인터스페이스 구현으로 직렬화/역직렬화가 가능하다.
+    *  역직렬화는 직렬화된 데이터를 받는 쪽에서 다시 객체 데이터로 변환하기 위한 작업을 말한다.
+    *
+    * 직렬화 대상 : 인터스페이스 상속 받은 객체, Primitive 타입의 데이터
+    * Primitive 타입이 아닌 Reference 타입 처럼 주소값을 지닌 객체들은 바이트로 변환하기 위해 Serializable 인터페이스를 구현해야 한다.
+    * */
 
+
+    //직렬화 상황
     //---------------------------------------------------------------------------------------------------------------------------------
+    /*JVM에 상주하는 객체 데이터를 영속화할 때 사용
+    * Servlet Session
+    *Cache
+    *Java RMI(Remote Method Invocation)*/
+
+    //직렬화 구현
+    //---------------------------------------------------------------------------------------------------------------------------------
+
+    public 직렬화() throws IOException {
+        Post post = new Post(1,"제목", "내용");
+        String fileName = "Post.ser";
+
+        try (
+                FileOutputStream fos = new FileOutputStream(fileName);
+                ObjectOutputStream out = new ObjectOutputStream(fos);
+        ) {
+            try {
+                out.writeObject(post);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    }
+    /*ObjectOutputStream으로 직렬화를 진행한다. Byte로 변환된 값을 저장하면 된다.*/
+
+    //역직렬화 구현
+    //---------------------------------------------------------------------------------------------------------------------------------
+    public void 역직렬화() throws IOException {
+        String fileName = "Post.ser";
+
+        try (
+                FileInputStream fis = new FileInputStream(fileName);
+                ObjectInputStream in = new ObjectInputStream(fis);
+                ) {
+            Post deserializedPost = (Post) in.readObject();
+            System.out.println(deserializedPost);
+
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    /*ObjectInputStream으로 역직렬화를 진행한다. Byte의 값을 다시 객체로 저장하는 과정이다.*/
+
+    /*데이터 통신 상에서 전송 및 저장하기 위해서 직렬화/역직렬화를 사용한다*/
 }
