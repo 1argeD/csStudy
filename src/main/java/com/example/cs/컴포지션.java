@@ -105,9 +105,9 @@ public class 컴포지션 {
     * 전혀 영향을 받지 않는 점이 핵심이다
     * */
 
-    //ex))
+    //ex)) CSTest 의 void customHashSet6()  참조
 
-    public class CustomHashSet_com<E> extends ForwardingSet {
+    public static class CustomHashSet_com<E> extends ForwardingSet {
         private int count = 0;
 
         public CustomHashSet_com(Set<E> set){
@@ -210,6 +210,24 @@ public class 컴포지션 {
 
     /* 이로써, HashSet의 부모클래스에 영향을 받지 않고 오버라이딩을 통해 원하는 작업을
     * 수행할 수 있게 된다*/
+
+
+    //ex)) CSTEST의 void customHashSet3() 참조
+
+    /*customHashset이 원하는 작업을 할 수 있도록 도와준 ForwardingSet은 위임(Delegation) 역할을 가진다.
+    *
+    * 원본 클래스를 wrapping 하는게 목적이므로, Wrapper Class 라고 부를 수도 있을 것이다.
+    *
+    * 그리고 현재 작업한 이러한 패턴을 '데코레이터 패턴' 이라고 부른다.
+    *어떠한 클래스를 Wrapper 클래스로 감싸며, 기능을 덧씌운다는 의미다.
+    *
+    * 상속을 쓰지말라는 이야기가 아니라, 상속을 사용하는 상황은 LSP 원칙에 따라서 IS-A관계가 반드시
+    * 성립할 때만 사용해야 한다. 하지만 현실적으로 추후의 변화가 이루어질 수 있는 방향성을 고려해 봤을 때
+    * 이렇게 명확한 IS-A 관계를 성립한다고 보장할 수 없는 경우가 대부분이다.
+    *
+    * 결국 이런 문제를 피하기 위해서, 컴포지션 기법을 사용하는 것이 객체 지향적인 설계를 할 때
+    * 유연함을 갖추고 나아갈 수 있을 것이다.
+    *  */
 
 
 
