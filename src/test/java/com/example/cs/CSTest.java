@@ -2,7 +2,10 @@ package com.example.cs;
 
 import com.example.cs.CallByValueAndCallByReference.CallByReference;
 import com.example.cs.CallByValueAndCallByReference.CallByValue와CallByReference;
+import com.example.cs.JavaThread.Java에서의Thread;
+import com.example.cs.JavaThread.ThreadTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -58,12 +61,12 @@ public class CSTest {
 
 
     @Test
-        void castingExample() {
-            Casting.Parent p = new Casting.Child();
+    void castingExample() {
+        Casting.Parent p = new Casting.Child();
 
-            p.printInfo(); // 문제1 : 출력 결과는?
-            Casting.Child c = (Casting.Child) new Casting.Parent(); //문제2 : 에러 종류는?
-        }
+        p.printInfo(); // 문제1 : 출력 결과는?
+        Casting.Child c = (Casting.Child) new Casting.Parent(); //문제2 : 에러 종류는?
+    }
     /*
     * 문제1 : Child Call!!!!
 
@@ -75,4 +78,27 @@ public class CSTest {
 * 프로그래머가 따로 (Child)로 형변환을 해줬기 때문에 컴파일러는 문법이 맞다고 생각해서 넘어간다.
 * 하지만 런타임 과정에서 Child 클래스에 Parent 클래스를 넣을 수 없다는 것을 알게 되고,
 * 런타임 에러가 나오게 되는것!*/
+
+
+    @Test
+    void java_thread() {
+        Java에서의Thread.Java_tread();
+    }
+
+    ThreadTest.Money shareMoney = new ThreadTest.Money();
+    ThreadTest.Bread shareBread = new ThreadTest.Bread();
+    @Test
+    void MoneyThread() throws InterruptedException {
+        //Money 자원 공유
+        shareMoney.saveMoney(1000000000);
+        shareMoney.minusMoney(50000000);
+    }
+
+    @Test
+    void BreadThread() throws InterruptedException {
+        //Bread 자원 공유
+        shareBread.makeBread();
+        shareBread.eatBread();
+    }
+
 }
