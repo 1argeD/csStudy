@@ -1,11 +1,11 @@
 package com.example.cs;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class Stream<I extends Number> {
+public class StreamJava {
     //Java 8 버전 이상부터는 Stream API를 지원한다.
 
     /*자바에서도 8버전 이상부터 람다를 사용한 함수형 프로그래밍이 가능해졌다.
@@ -124,5 +124,25 @@ public class Stream<I extends Number> {
 
     //reduce()
 
+    //스트림 전체 합
+    public static void createStreamReduceSum() {
+        Stream<Integer> numbers = Stream.of(1,2,3,4,5,6);
+        Optional<Integer> result = numbers.reduce(Integer::sum); //sum으로 Integer의 합을 구함
+        result.ifPresent(System.out::println);
+    }
+
+    //설정한 값과 스트림 전체의 합
+    public static void createStreamInitialValueReduce() {
+        Stream<Integer> numbers = Stream.of(1,2,3,4,5,6);
+        Integer result = numbers.reduce(10, Integer::sum);
+        System.out.println(result);
+    }
+
+    //설정한 값과 비어있는 스트림의 합
+    public static void createStreamInitialEmptyReduce() {
+        Stream <Integer> numbers = Stream.empty();
+        Integer result = numbers.reduce(10,Integer::sum);
+        System.out.println(result);
+    }
     //collect()
 }

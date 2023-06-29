@@ -101,4 +101,16 @@ public class CSTest {
         shareBread.eatBread();
     }
 
+
+
+    @Test
+    void streamReduceTest() {
+        //numbers의 총합
+        StreamJava.createStreamReduceSum();
+        //설정값과 numbers의 총합
+        StreamJava.createStreamInitialValueReduce();
+        //설정값과 비어있는 값의 합
+        StreamJava.createStreamInitialEmptyReduce();
+    }
+
 }
