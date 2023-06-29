@@ -1,6 +1,11 @@
 package com.example.cs;
 
-public class Stream {
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class Stream<I extends Number> {
     //Java 8 버전 이상부터는 Stream API를 지원한다.
 
     /*자바에서도 8버전 이상부터 람다를 사용한 함수형 프로그래밍이 가능해졌다.
@@ -43,6 +48,38 @@ public class Stream {
     * 최종 연산에서 한꺼번에 처리하게 된다.
     * */
 
+    public class Item {
+        private final String name;
+        private final int price;
+
+
+        public Item(String name, int price) {
+            this.name = name;
+            this.price =price;
+        }
+
+        public int getPrice() {
+            return price;
+        }
+        public String getName() {
+            return name;
+        }
+    }
+
+    //ex)) Item 중에 가격이 1000 이상인 이름을 5개 선택한다.
+    List<Item> items;
+
+    {
+        items = items.stream()
+                .filter(item -> item.getPrice()>=1000)
+                .limit(5)
+                .collect(Collectors.toList());
+    }
+    //filter와 map은 다른 연산이지만, 한 과정으로 병합된다.
+    /* 만약 Collection이었다면, 우선 가격이 1000이상인 아이템을 찾은 다음, 이름만 따로 저장한 뒤에
+    * 5개를 선택해야 한다. 연산 최적화는 물론, 가독성 면에서도 Stream이 더 좋다.
+    * */
+
     //Stream 중간 연산
 
     /*
@@ -56,4 +93,36 @@ public class Stream {
 
     // 중간 연산은 모두 스트림을 반환한다.
 
+    //Stream 최종 연산
+
+    /*
+    * (boolean) allMatch(Predicate) : 모든 스트림 요소가 Predicate와 일치하는지 검사
+    * (boolean) anyMatch(Predicate) : 하나라도 일치하는 요소가 있는지 검사
+    * (boolean) noneMatch(Predicate) :매치되는 요소가 없는지 검사
+    * (Optional) findAny() : 현재 스트림에서 임의의 요소
+    * (Optional) findFirst() : 스트림의 첫번째 요소
+    * reduce() : 모든 스트림 요소를 처리해 값을 도출. 두 개의 인자를 가짐.
+    * collect() : 스트림을 reduce 하여, lest, map , 정수 형식 컬렉션을 만듬
+    * (void) forEach() : 스트림 각 요소를 소비하여 람다 적용
+    * (Long) count : 스트림 요소 개수 반환
+    *  */
+
+    //Optional 클래스
+
+    // 값의 존재나 여부를 표현한느 컨테이너 Class
+
+    /*
+    * null 로 인한 버그를 막을 수 있다는 장점이 있다.
+    * isPresent() : Optional이 값을 포함할 떄 Ture 반환
+    * */
+
+    //Stream 활용 예제
+
+    //map()
+
+    //filter()
+
+    //reduce()
+
+    //collect()
 }
