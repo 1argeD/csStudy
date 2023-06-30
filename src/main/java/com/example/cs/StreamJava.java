@@ -1,5 +1,7 @@
 package com.example.cs;
 
+import javax.xml.stream.events.Namespace;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -116,12 +118,22 @@ public class StreamJava {
     * isPresent() : Optional이 값을 포함할 떄 Ture 반환
     * */
 
-    //Stream 활용 예제
-
+    //Stream 활용 예제 CSTest 참조
+    static List<String > names = Arrays.asList("Frist강유태","Second두칠","Thrid포론포","Fourth나나문","지니피아","한결","고단씨","엶");
     //map()
+    public static void setStreamMapNames() {
+        names.stream()
+                .map(String::toUpperCase)//
+                .forEach(System.out::println);
+    }
+
 
     //filter()
-
+    public static void createStreamFilter() {
+        List<String>streamFilter = names.stream()
+                .filter(name -> name.startsWith("S")).toList();//S로 시작하는 값
+        System.out.println(streamFilter);
+    }
     //reduce()
 
     //스트림 전체 합
@@ -145,4 +157,9 @@ public class StreamJava {
         System.out.println(result);
     }
     //collect()
+    public static void createStreamCollect() {
+        System.out.println(names.stream()
+                .map(String :: toUpperCase)
+                .collect(Collectors.joining(", ")));
+    }
 }

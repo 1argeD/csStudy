@@ -101,7 +101,12 @@ public class CSTest {
         shareBread.eatBread();
     }
 
+//Stream예시
 
+    @Test
+    void streamMapTest() {
+        StreamJava.setStreamMapNames();
+    }
 
     @Test
     void streamReduceTest() {
@@ -111,6 +116,16 @@ public class CSTest {
         StreamJava.createStreamInitialValueReduce();
         //설정값과 비어있는 값의 합
         StreamJava.createStreamInitialEmptyReduce();
+    }
+
+    @Test
+    void streamFilterTest() {
+        StreamJava.createStreamFilter();
+    }
+
+    @Test
+    void streamCollectTest() {
+        StreamJava.createStreamCollect();
     }
 
 }
