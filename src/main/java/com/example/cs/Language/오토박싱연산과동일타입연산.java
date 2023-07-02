@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 public class 오토박싱연산과동일타입연산 {
 

@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 public class Casting {
     // 업캐스팅과 다운캐스팅

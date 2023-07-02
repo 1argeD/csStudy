@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 public class JavaVer {
     //Java 8

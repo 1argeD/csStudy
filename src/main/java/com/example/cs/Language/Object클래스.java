@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 public class Object클래스 {
     // wait, notify, notifyAll

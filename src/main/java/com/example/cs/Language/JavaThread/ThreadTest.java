@@ -1,4 +1,4 @@
-package com.example.cs.JavaThread;
+package com.example.cs.Language.JavaThread;
 
 public class ThreadTest implements Runnable {
     public ThreadTest() {

@@ -1,4 +1,4 @@
-package com.example.cs.직렬화;
+package com.example.cs.Language.직렬화;
 
 import java.io.*;
 

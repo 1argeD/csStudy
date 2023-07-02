@@ -1,13 +1,7 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.data.web.JsonPath;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import javax.persistence.PostUpdate;
-import javax.persistence.criteria.CriteriaBuilder;
-
-import static com.example.cs.Recored.sampleStaticAndPublicMethod.STATIC_VARIABLE;
 
 public class Recored {
     // Java 14 에서 프리뷰로 도입된 클래스 타입

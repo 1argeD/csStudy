@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 public class 자바8 {
     /*Java 8은 가장 큰 변화가 있던 버전

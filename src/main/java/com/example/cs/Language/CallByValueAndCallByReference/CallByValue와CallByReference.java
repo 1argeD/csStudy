@@ -1,4 +1,4 @@
-package com.example.cs.CallByValueAndCallByReference;
+package com.example.cs.Language.CallByValueAndCallByReference;
 
 public class CallByValue와CallByReference {
     //상당히 기본적인 질문이지만, 헷갈리기 쉬운 주제다.

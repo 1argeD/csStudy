@@ -1,4 +1,4 @@
-package com.example.cs;
+package com.example.cs.Language;
 
 public class 자바컴파일과과정 {
     //들어가기 전

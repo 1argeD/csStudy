@@ -1,4 +1,4 @@
-package com.example.cs.JavaThread;
+package com.example.cs.Language.JavaThread;
 
 public class Java에서의Thread {
     //요즘 OS는 모두 멀티태스킹을 지원한다.
