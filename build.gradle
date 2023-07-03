@@ -25,6 +25,13 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
 
+    runtimeOnly 'com.h2database:h2'
+
+    //kafka
+    implementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'//kafka테스트
+
+
 }
 
 tasks.named('test') {

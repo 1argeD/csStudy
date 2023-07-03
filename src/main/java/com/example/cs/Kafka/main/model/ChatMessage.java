@@ -1,4 +1,4 @@
-package com.example.cs.Kafka.main.controller;
+package com.example.cs.Kafka.main.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
