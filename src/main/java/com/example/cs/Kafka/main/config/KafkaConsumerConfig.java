@@ -13,7 +13,6 @@ import org.springframework.kafka.support.serializer.JsonDeserializer;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @EnableKafka
 @Configuration
@@ -22,10 +21,10 @@ public class KafkaConsumerConfig {
     private String servers;
 
     @Bean
-    public DefaultKafkaConsumerFactory consumerFactory() {
+    public DefaultKafkaConsumerFactory<String, ChatMessage> consumerFactory() {
         Map<String, Object> config = new HashMap<>();
         config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, servers);
-        config.put(ConsumerConfig.GROUP_ID_CONFIG, "testgroup");
+        config.put(ConsumerConfig.GROUP_ID_CONFIG, "testGroup");
 
         return new DefaultKafkaConsumerFactory<>(config, new StringDeserializer(), new JsonDeserializer<>(ChatMessage.class));
     }

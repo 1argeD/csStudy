@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     private final ProducerService service;
 
-    @PostMapping("Kafka")
+    @PostMapping("kafka")
     public String sendMessage(@RequestBody ChatMessage message) {
         System.out.println("text : " + message);
         service.sendMessage(message);

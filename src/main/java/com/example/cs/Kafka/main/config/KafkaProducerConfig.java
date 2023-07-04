@@ -14,7 +14,6 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @EnableKafka
 @Configuration
