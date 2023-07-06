@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ConsumerService {
-    @KafkaListener(topics = "testTopic", groupId = "testGroup", containerFactory = "kafkaListener")
+    @KafkaListener(topics = "testTopic", groupId = "testTopic", containerFactory = "kafkaListener")
     public void consume(ChatMessage message) {
         System.out.println("name : "+ message.getSender());
-        System.out.println("consume message + "+ message.getContext());
+        System.out.println("consume message : "+ message.getContext());
     }
 }
