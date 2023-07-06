@@ -1,4 +1,4 @@
-package com.example.cs.Language;
+package com.example.cs.Language.JAVA;
 
 import java.util.Objects;
 

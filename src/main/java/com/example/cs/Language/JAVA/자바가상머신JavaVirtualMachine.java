@@ -1,4 +1,4 @@
-package com.example.cs.Language;
+package com.example.cs.Language.JAVA;
 
 public class 자바가상머신JavaVirtualMachine {
     //시스템 메모리를 관리하면서, 자바 기반 애플리케이션을 위해 이식 가능한 실행 환경을 제공함

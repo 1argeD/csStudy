@@ -1,4 +1,4 @@
-package com.example.cs.Language;
+package com.example.cs.Language.JAVA;
 
 public class StringAndStringBufferStringBuilder {
     // String의 특징

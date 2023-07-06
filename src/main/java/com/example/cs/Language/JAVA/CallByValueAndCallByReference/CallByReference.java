@@ -1,4 +1,4 @@
-package com.example.cs.Language.CallByValueAndCallByReference;
+package com.example.cs.Language.JAVA.CallByValueAndCallByReference;
 
 public class CallByReference {
     int value;

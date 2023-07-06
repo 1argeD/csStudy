@@ -1,4 +1,4 @@
-package com.example.cs.Language;
+package com.example.cs.Language.JAVA;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

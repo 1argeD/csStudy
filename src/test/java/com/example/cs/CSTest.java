@@ -1,10 +1,10 @@
 package com.example.cs;
 
-import com.example.cs.Language.CallByValueAndCallByReference.CallByReference;
-import com.example.cs.Language.CallByValueAndCallByReference.CallByValue와CallByReference;
-import com.example.cs.Language.JavaThread.Java에서의Thread;
-import com.example.cs.Language.JavaThread.ThreadTest;
-import com.example.cs.Language.*;
+import com.example.cs.Language.JAVA.CallByValueAndCallByReference.CallByReference;
+import com.example.cs.Language.JAVA.CallByValueAndCallByReference.CallByValue와CallByReference;
+import com.example.cs.Language.JAVA.*;
+import com.example.cs.Language.JAVA.JavaThread.Java에서의Thread;
+import com.example.cs.Language.JAVA.JavaThread.ThreadTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

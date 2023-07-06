@@ -1,4 +1,4 @@
-package com.example.cs.Language;
+package com.example.cs.Language.JAVA;
 
 import javax.xml.stream.events.Namespace;
 import java.util.Arrays;
