@@ -12,7 +12,7 @@ public class ProducerService {
     private final KafkaTemplate<String, ChatMessage>kafkaTemplate;
 
     public void sendMessage(ChatMessage chatMessage) {
-        System.out.println("chatMessage + " + chatMessage.getContext());
+        System.out.println("chatMessage : " + chatMessage.context());
 
         kafkaTemplate.send(TOPIC, chatMessage);
     }
