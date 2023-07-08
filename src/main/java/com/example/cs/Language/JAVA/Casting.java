@@ -42,24 +42,24 @@ public class Casting {
 
     //문제
 
-    static class Parent {
+    public static class Parent {
         int age;
 
-        Parent() {}
+        public Parent() {}
 
         Parent(int age) {
             this.age = age;
         }
 
-        void printInfo() {
+        public void printInfo() {
             System.out.println("Parent Call!!!!");
         }
     }
 
-    static class Child extends Parent {
+    public static class Child extends Parent {
         String name;
 
-        Child() {}
+        public Child() {}
 
         Child(int age, String name) {
             super(age);
@@ -67,7 +67,7 @@ public class Casting {
         }
 
         @Override
-        void printInfo() {
+        public void printInfo() {
             System.out.println("Child Call!!!!");
         }
         // CSTest로 이동할 것

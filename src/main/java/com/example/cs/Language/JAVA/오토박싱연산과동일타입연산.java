@@ -23,4 +23,5 @@ public class 오토박싱연산과동일타입연산 {
         System.out.println("오토 박싱 연산 : " + (System.currentTimeMillis() - t) + " ms");
         System.out.println("동일 타입 연산 : " + (System.currentTimeMillis() - t)  + " ms");
     }
+
 }
